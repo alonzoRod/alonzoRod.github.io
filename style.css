@@ -1,0 +1,227 @@
+html{
+	scroll-behavior: smooth;
+}
+
+:root{
+	--dark-primary-color: #616161;
+	--light-primary-color: #F5F5F5;
+	--primary-color: #9E9E9E;
+	--text-icons: #212121;
+	--accent-color: #607D8B;
+	--primary-text: #212121;
+	--secondary-text: #757575;
+	--divided-color: #BDBDBD;
+	--white: #FFF;
+}
+
+*{
+	margin: 0;
+	box-sizing: border-box;
+	transition: .3s;
+}
+
+body{
+	font-family: 'League Spartan', sans-serif;
+}
+
+.main{
+	display: grid;
+	/*max-width: 1450px;*/
+	margin: 0 auto;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(6, max-content);
+	grid-template-areas: 
+	"main"
+	"cta"
+	"image1"
+	"about"
+	"image2"
+	"contactos";
+}
+
+.container{
+	width: 90%;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 60px 0;
+}
+
+.main__hero{
+	grid-area: main;
+	background-image: url("instalacionwr.jpeg");
+	min-height: 580px;
+	background-size: cover;
+	background-position: center;
+}
+
+.main__nav{
+	display: flex;
+}
+
+.main__links{
+	display: none;
+}
+
+.main__list a:hover{
+	color: var(--divided-color);
+	font-size: 1.65em;
+}
+
+.main__list a:active{
+	color: var(--accent-color);
+}
+
+.main__logo{
+	margin: 0 auto;
+}
+
+.main__buy{
+	grid-area: cta;
+}
+
+.main__content{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.main__title{
+	font-size: 2.5em;
+}
+
+.main__paragraph{
+	line-height: 1.6;
+	margin: 1em 0 2em;
+	color: var(--dark-primary-color);
+}
+
+.main__paragraph--about{
+	margin: 1em 0 0 0;
+}
+
+.main__cta{
+	text-decoration: none;
+	color: var(--dark-primary-color);
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+.main__bg{
+	grid-area: image1;
+	margin:.8em 0;
+	min-height: 300px;
+	height: 100%;
+	background-image: url("tablero2.jpeg");
+	background-size: cover;
+	background-position: center;
+
+}
+
+.main__about{
+	grid-area: about;
+}
+
+.main__bg--second{
+	grid-area: image2;
+	background-image: url("condensadores.jpeg")
+}
+
+.main__contactos-container{
+	margin-top: 25px;
+	align-items: center;
+	margin-bottom: 10px;
+	grid-area: contactos;
+	min-height: 50px;
+	text-align: center;
+}
+
+.main__contactos{
+	width: 100%;
+	display:;
+	background: var(--accent-color);
+	border-radius:;
+	margin-top: 5px;
+}
+
+.secondary__contactos{
+	background-image: url("footer-background-01.jpg");
+	margin-top: 5px;
+	width: 100%;
+	font-family: 'League Spartan', sans-serif;
+	font-size: 1.05em;
+	line-height: 1.1;
+	color: var(--dark-primary-color);
+}
+
+@media (min-width:768px){
+	.container{
+		width: 85%;
+		padding: 70px 0;
+	}
+
+	.main{
+		margin:;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-areas: 
+		"main main main main cta cta cta"
+		"main main main main cta cta cta"
+		"main main main main cta cta cta"
+		"image1 image1 about about about image2 image2"
+		"image1 image1 about about about image2 image2"
+		"contactos contactos contactos contactos contactos contactos contactos"
+	}
+
+	.main__hamburguer{
+		display: none;
+	}
+
+	.main__logo{
+		margin: 0;
+	}
+
+	.main__links{
+		padding: 0;
+		display: grid;
+		/*grid-template-rows: 30px 30px;
+		grid-template-columns: auto auto auto;
+		grid-template-areas: 
+		"home montajes informacion"
+		"contactos contactos contactos contactos"*/
+		grid-auto-flow: column;
+		gap: 1em;
+		margin-left: 10%;
+	}
+
+	/*.main__list-1{
+		grid-area: home;
+	}
+
+	.main__list-2{
+		grid-area: montajes;
+	}
+
+	.main__list-3{
+		grid-area: informacion
+	}
+
+	.main__list-4{
+		grid-area: contactos
+	}*/
+
+	.main__list{
+		list-style: none;
+	}
+
+	.main__link{
+		color: black;
+		text-decoration: none;
+		font-size:1.5em;
+	}
+
+	.main__paragraph{
+		font-size: 1.2em
+	}
+}
+
